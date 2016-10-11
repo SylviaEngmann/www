@@ -73,6 +73,8 @@
     <icon src="res/icons/windows/Wide310x150Logo.scale-240.png" width="744" height="360" />
   </platform>
   <platform name="wp8">
+    <plugin name="cordova-plugin-camera"/>
+    <plugin name="cordova-plugin-media-capture"/>
     <icon src="res/icons/wp8/ApplicationIcon.png" width="99" height="99" />
     <icon src="res/icons/wp8/Background.png" width="159" height="159" />
   </platform>
