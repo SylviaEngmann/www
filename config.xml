@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="io.cordova.myappfe20d9" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US" android-versionCode="1">
+<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps"
+         id="ec1" 
+         version="1.0.0"
+          xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US" android-versionCode="1">
   <name>MY EC</name>
   <description>MY EC APPLICATION</description>
   <author href="http://cordova.io" email="dev@cordova.apache.org">Apache Cordova Team </author>
@@ -73,6 +76,7 @@
     <icon src="res/icons/windows/Wide310x150Logo.scale-240.png" width="744" height="360" />
   </platform>
   <platform name="wp8">
+    <plugin name="cordova-plugin-barcodeScanner"/>
     <plugin name="cordova-plugin-camera"/>
     <plugin name="cordova-plugin-media-capture"/>
     <icon src="res/icons/wp8/ApplicationIcon.png" width="99" height="99" />
