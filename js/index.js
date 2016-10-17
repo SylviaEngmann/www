@@ -35,9 +35,8 @@
 	}
 
 
-document.getElementById("barcode").onclick = 
-	function barcode(){
- 	cordova.plugins.barcodeScanner.scan(
+document.getElementById("barcode").onclick = function barcode(){
+ 	cordova.plugins.barcodescanner.scan(
       	function (result) {
           alert("We got a barcode\n" +
                 "Result: " + result.text + "\n" +
