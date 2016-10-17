@@ -1,95 +1,66 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<title>Electoral Commission</title>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 
+		<!-- Path to your custom app styles-->
 		<link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
 		<link rel="stylesheet" href="css/jquery.mobile.theme.css" />
-
-		<script>
+         <script>
 			var userAgent = navigator.userAgent + '';
 			if (userAgent.indexOf('iPhone') > -1) {
-				document.write('<script src="js/cordova-iphone.js"></sc' + 'ript>');
+				document.write('<script src="js/lib/cordova-iphone.js"></sc' + 'ript>');
 				var mobile_system = 'iphone';
 			} else if (userAgent.indexOf('Android') > -1) {
-				document.write('<script src="js/cordova-android.js"></sc' + 'ript>');
+				document.write('<script src="js/lib/cordova-android.js"></sc' + 'ript>');
 				var mobile_system = 'android';
 			} else {
 				var mobile_system = '';
 			}
 		</script>
 
-		<script src="js/jquery.js"></script>
+		<script src="scripts/jquery.js"></script>
 		<!-- your scripts here -->
-		<script src="js/app.js"></script>
-		<script src="js/bootstrap.js"></script>
-		<script src="js/jquery.mobile.js"></script>
-		<script src="js/index.js"></script>
-		<script src="js/cordova.js"></script>
-
-
-		<style>
-			.ui-selectmenu.ui-popup .ui-input-search {
-				margin-left: .5em;
-				margin-right: .5em;
-			}
-			.ui-selectmenu.ui-dialog .ui-content {
-				padding-top: 0;
-			}
-			.ui-selectmenu.ui-dialog .ui-selectmenu-list {
-				margin-top: 0;
-			}
-			.ui-selectmenu.ui-popup .ui-selectmenu-list li.ui-first-child .ui-btn {
-				border-top-width: 1px;
-				-webkit-border-radius: 0;
-				border-radius: 0;
-			}
-			.ui-selectmenu.ui-dialog .ui-header {
-				border-bottom-width: 1px;
-			}
-			a {
-				text-decoration: none;
-			}
-		</style>
-
+		
+		<script src="scripts/jquery.mobile.js"></script>
+		<title>app</title>
 	</head>
 	<body>
-
 		<div data-role="page" id="landingPage" style="background: white">
-
 			<div data-role="header" style="text-shadow: none">
-				<h1>EC</h1>
-				<a href="index.html" data-role="button" data-icon="back" data-iconpos="notext" style="background: white;border: none;">Back</a>
+				<h1>EC </h1>
+				<a href="index.html" data-role="button" data-icon="refresh" data-iconpos="notext" style="background: white;border: none;">Refresh</a>
 			</div><!-- /header -->
-			<img src = "img/ec.jpg"/>
+			<img src="img/ec.jpeg" />
 			<div data-role="content" style="text-shadow: none">
-				
-				<a href="#declareRegions" data-transition="pop"  data-role="button" data-transition='slide'>
-					<button> Declare </button>
-				</a>
+				<a href="#declareRegions" data-transition="flip">
+				<button>
+					Declare
+				</button> </a>
 				<br />
-				<a href="#results" data-transition="pop"  data-role="button" data-transition='slide'>
-					<button> Results </button>
-				</a>
+				<a href="#results" data-transition="slide">
+				<button>
+					Results
+				</button> </a>
 				<br />
-				<a href="#camera" id ="capturePhoto" data-transition="pop"  data-role="button" data-transition='slide'>
-					<button> Camera </button>
-					<div><center><img class= "lazy" style="display:none;width:100%;height:100;" id="smallImage"
-				    src="" /></center></div>
+				<button id="capturePhoto">CAMERA</button>
+                  <div><center><img class="lazy" style="display:none;width:100%;height:100%;" id="smallImage" src="" /></center></div>
+				  
+				  <video width="400" controls>
+                      <source src="video.mp4" type="video/mp4">
+                 </video>
+				 <audio controls>
+                        <source src="audio.mp3" type="audio/mpeg">
+                  </audio>
+                 <button id = "barcode"> BarCode Scanner </button>
 
-				   </a>
-				<br />
-				<button id = "barcode" > BarCode Scanner </button>
-				
-				<video width="400" controls>
-				  <source src = "" type = "">
-				</video>
-				
 			</div><!-- /content -->
 		</div><!-- /page -->
+		
+		
 
 		<div data-role="page" id="declareRegions" style="background: white">
 
@@ -157,6 +128,14 @@
                  </div>
 			</div><!-- /content -->
 		</div><!-- /page -->
+
+	</body>
+</html>
+	<body>
+	   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+			<script type="text/javascript" src="cordova.js"></script>
+			<script type="text/javascript" src="scripts/platformOverrides.js"></script>
+			<script type="text/javascript" src="scripts/index.js"></script>
 
 	</body>
 </html>

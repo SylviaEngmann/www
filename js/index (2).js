@@ -1,4 +1,4 @@
-﻿(function() {
+(function() {
 
 	document.addEventListener('deviceready', onDeviceReady.bind(this), false);
 	var pictureSource;
